@@ -26,6 +26,8 @@ FILES_${PN}-img2fwup = "${bindir}/img2fwup"
 PACKAGES = "${PN}-dev ${PN}-dbg ${PN}-img2fwup ${PN}"
 BBCLASSEXTEND = "native nativesdk"
 
+RDEPENDS_${PN} += "bash"
+
 do_configure_append () {
   ln -s ${S}/src/fwup.h2m ${WORKDIR}/build/src/fwup.h2m
 }
