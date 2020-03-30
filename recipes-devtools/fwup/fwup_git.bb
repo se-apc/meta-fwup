@@ -9,8 +9,8 @@ DEPENDS = "libconfuse libarchive libsodium zlib pkgconfig-native"
 SRC_URI = "git://github.com/fhunleth/fwup.git;protocol=https;"
 
 # Modify these as desired
-PV = "1.3.0"
-SRCREV = "b6f6236e8c97d7058e340ba1b0d2fcfbe4d619a0"
+PV = "1.5.1"
+SRCREV = "7aaf679541d15c29e085658c56c9ab5c336117a0"
 
 S = "${WORKDIR}/git"
 
