@@ -9,7 +9,8 @@ DEPENDS = "libconfuse libarchive libsodium zlib pkgconfig-native"
 
 # Modify these as desired
 PV = "1.5.1"
-SRC_URI = "https://github.com/fhunleth/fwup/archive/v${PV}.tar.gz"
+# SRC_URI = "https://github.com/fhunleth/fwup/archive/v${PV}.tar.gz"
+SRC_URI = "https://github.com/fwup-home/fwup/archive/fwup-v${PV}.tar.gz"
 
 SRC_URI[md5sum] = "86835a9ee2aceb520b3ba900758c8f90"
 SRC_URI[sha256sum] = "6fa3a44b0ca4fe4196f0f486618215cf3fa06fe40963965241f8e82c7494c59c"
