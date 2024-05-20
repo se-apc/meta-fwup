@@ -14,7 +14,7 @@ SRCREV = "e10b80e0e95bbcf7dc02641c242dab1a04995b20"
 
 S = "${WORKDIR}/git"
 
-CFLAGS_prepend = "-I${S} "
+CFLAGS:prepend = "-I${S} "
 
 inherit autotools lib_package pkgconfig
 FILES_${PN} += "${datadir}/bash-completion/completions/fwup \
@@ -28,6 +28,6 @@ BBCLASSEXTEND = "native nativesdk"
 
 RDEPENDS_${PN} += "bash"
 
-do_configure_append () {
+do_configure:append () {
   ln -s ${S}/src/fwup.h2m ${WORKDIR}/build/src/fwup.h2m
 }

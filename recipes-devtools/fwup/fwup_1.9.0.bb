@@ -16,7 +16,7 @@ SRC_URI[sha256sum] = "18ae6753145cef2fd5f5fc83e29c2d883e570668d8aa064ee6c94d4c5e
 
 S = "${WORKDIR}/fwup-${PV}"
 
-CFLAGS_prepend = "-I${S} "
+CFLAGS:prepend = "-I${S} "
 
 inherit autotools lib_package pkgconfig
 FILES_${PN} += "${datadir}/bash-completion/completions/fwup \
@@ -30,6 +30,6 @@ BBCLASSEXTEND = "native nativesdk"
 
 RDEPENDS_${PN} += "bash"
 
-do_configure_append () {
+do_configure:append () {
   ln -s ${S}/src/fwup.h2m ${WORKDIR}/build/src/fwup.h2m
 }
