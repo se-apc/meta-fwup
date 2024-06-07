@@ -19,16 +19,16 @@ S = "${WORKDIR}/fwup-${PV}"
 CFLAGS:prepend = "-I${S} "
 
 inherit autotools lib_package pkgconfig
-FILES_${PN} += "${datadir}/bash-completion/completions/fwup \
+FILES:${PN} += "${datadir}/bash-completion/completions/fwup \
                ${bindir}/fwup \
 "
 
-FILES_${PN}-img2fwup = "${bindir}/img2fwup"
+FILES:${PN}-img2fwup = "${bindir}/img2fwup"
 
 PACKAGES = "${PN}-dev ${PN}-dbg ${PN}-img2fwup ${PN}"
 BBCLASSEXTEND = "native nativesdk"
 
-RDEPENDS_${PN} += "bash"
+RDEPENDS:${PN} += "bash"
 
 do_configure:append () {
   ln -s ${S}/src/fwup.h2m ${WORKDIR}/build/src/fwup.h2m
