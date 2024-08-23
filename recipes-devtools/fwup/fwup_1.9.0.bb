@@ -6,15 +6,13 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 DEPENDS = "libconfuse libarchive libsodium zlib pkgconfig-native"
 
+SRC_URI = "git://github.com/fhunleth/fwup.git;protocol=https;branch=main;"
 
 # Modify these as desired
 PV = "1.9.0"
-SRC_URI = "https://github.com/fhunleth/fwup/archive/v${PV}.tar.gz"
+SRCREV = "e10b80e0e95bbcf7dc02641c242dab1a04995b20"
 
-SRC_URI[md5sum] = "9b8691f446ad8f1b3e2605556cab78f4"
-SRC_URI[sha256sum] = "18ae6753145cef2fd5f5fc83e29c2d883e570668d8aa064ee6c94d4c5e44d73d"
-
-S = "${WORKDIR}/fwup-${PV}"
+S = "${WORKDIR}/git"
 
 CFLAGS:prepend = "-I${S} "
 
